@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="test.task.nc1.frontend.controller.NewsViewController">
+    <GridPane hgap="10" vgap="10" padding="10">
+        <Label text="Period:"/>
+        <HBox spacing="10">
+            <RadioButton fx:id="morning" text="Morning"/>
+            <RadioButton fx:id="day" text="Day"/>
+            <RadioButton fx:id="evening" text="Evening"/>
+        </HBox>
+    </GridPane>
+    <VBox spacing="10" padding="10">
+        <Label fx:id="titleLabel" text="Title" style="-fx-font-size: 20px;"/>
+        <Label fx:id="descriptionLabel" text="Description" wrapText="true"/>
+        <Label fx:id="publicationTimeLabel" text="Publication Time" style="-fx-font-style: italic;"/>
+        <HBox spacing="10">
+            <Button fx:id="prevButton" text="Previous" onAction="#showPreviousNews"/>
+            <Button fx:id="nextButton" text="Next" onAction="#showNextNews"/>
+        </HBox>
+    </VBox>
+</VBox>
