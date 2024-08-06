@@ -12,7 +12,7 @@ public class NewsScheduler {
     private final NewsClient newsClient;
     private final NewsService newsService;
 
-    @Scheduled(cron = "0 0/1 * * * *")
+    @Scheduled(cron = "0 0/20 * * * *")
     public void newsGathering() {
         newsClient.getNews();
     }
